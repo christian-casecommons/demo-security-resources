@@ -1,0 +1,14 @@
+---
+Sts.Role: arn:aws:iam::430570512086:role/admin
+
+config_iam_groups:
+  DemoResourcesAdmins:
+    Policies:
+      - PolicyName: "AssumeDemoResourcesAdminRole"
+        PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: "Allow"
+              Action:
+              - "sts:AssumeRole"
+              Resource: "arn:aws:iam::610547539895:role/admin"

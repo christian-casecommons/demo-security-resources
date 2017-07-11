@@ -1,0 +1,7 @@
+# STS role in the target AWS account to assume
+Sts.Role: "arn:aws:iam::610547539895:role/admin"
+
+# Trusted entities for the IAM admin role
+# Here we trust the demo-users account
+config_iam_admin_accounts:
+  - 430570512086
